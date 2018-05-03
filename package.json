@@ -1,0 +1,55 @@
+{
+  "name": "yTest",
+  "version": "1.0.0",
+  "description": "yTest sample for Node.js",
+  "keywords": [
+    "yTest",
+    "sample",
+    "automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/macaca-sample/sample-nodejs.git"
+  },
+  "devDependencies": {
+    "android-app-bootstrap": "^1.0.8",
+    "blink-diff": "^1.0.13",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.4",
+    "datahub-nodejs-sdk": "^1.0.7",
+    "git-contributor": "^1.0.8",
+    "ios-app-bootstrap": "^1.0.11",
+    "macaca-cli": "*",
+    "macaca-reporter": "^1.0.10",
+    "macaca-simple-reportor": "^1.0.0",
+    "macaca-utils": "*",
+    "macaca-wd": "^1.0.17",
+    "mocha": "^4.0.1",
+    "should": "^13.2.1",
+    "webdriver-keycode": "^1.0.2"
+  },
+  "optionalDependencies": {
+    "macaca-android": "*",
+    "macaca-chrome": "*",
+    "macaca-electron": "*",
+    "macaca-ios": "*",
+    "macaca-puppeteer": "*"
+  },
+  "scripts": {
+    "doctor": "macaca doctor",
+    "test:native": "macaca run --verbose --reporter macaca-reporter -d ./sample-test/mobile-app-sample.test.js",
+    "test:mobile-browser": "macaca run --verbose --reporter macaca-reporter -d ./sample-test/mobile-app-sample.test.js",
+    "test:desktop-browser": "macaca run --verbose --reporter macaca-reporter -d ./sample-test/desktop-browser-sample.test.js",
+    "test:ios": "cross-env platform=ios npm run test:native",
+    "test:android": "cross-env platform=android npm run test:native",
+    "test:ios-safari": "cross-env browser=safari npm run test:mobile-browser",
+    "test:android-chrome": "cross-env browser=chrome npm run test:mobile-browser",
+    "test:desktop-puppeteer": "cross-env browser=puppeteer npm run test:desktop-browser",
+    "test:desktop-electron": "cross-env browser=electron npm run test:desktop-browser",
+    "test:desktop-chrome": "cross-env browser=chrome npm run test:desktop-browser",
+    "test:simple-reporter": "cross-env CUSTOM_DIR=macaca-logs/desktop-browser-sample macaca run --verbose --reporter macaca-simple-reportor -d ./macaca-test/desktop-browser-sample.test.js",
+    "contributor": "git-contributor"
+  },
+  "homepage": "https://macacajs.github.io",
+  "license": "MIT"
+}
