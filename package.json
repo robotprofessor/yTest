@@ -46,7 +46,7 @@
     "test:android-chrome": "cross-env browser=chrome npm run test:mobile-browser",
     "test:desktop-puppeteer": "cross-env browser=puppeteer npm run test:desktop-browser",
     "test:desktop-electron": "cross-env browser=electron npm run test:desktop-browser",
-    "test:desktop-chrome": "cross-env browser=chrome npm run test:desktop-browser",
+    "test:desktop-chrome": "cross-env browser=chrome  CHROMEDRIVER_VERSION=2.3.7  npm run test:desktop-browser",
     "test:simple-reporter": "cross-env CUSTOM_DIR=macaca-logs/desktop-browser-sample macaca run --verbose --reporter macaca-simple-reportor -d ./macaca-test/desktop-browser-sample.test.js",
     "contributor": "git-contributor"
   },
