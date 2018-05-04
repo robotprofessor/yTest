@@ -1,7 +1,7 @@
 {
-  "name": "yTest",
+  "name": "ytestabc",
   "version": "1.0.0",
-  "description": "yTest sample for Node.js",
+  "description": "yTestabc  sample for Node.js",
   "keywords": [
     "yTest",
     "sample",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/macaca-sample/sample-nodejs.git"
+    "url": "git://github.com/robotprofessor/yTest.git"
   },
   "devDependencies": {
     "android-app-bootstrap": "^1.0.8",
@@ -51,5 +51,8 @@
     "contributor": "git-contributor"
   },
   "homepage": "https://macacajs.github.io",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "user": "0.0.0"
+  }
 }
