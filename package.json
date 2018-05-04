@@ -33,7 +33,7 @@
     "macaca-chrome": "*",
     "macaca-electron": "*",
     "macaca-ios": "*",
-    "macaca-puppeteer": "*"
+    "macaca-puppeteer": "*" 
   },
   "scripts": {
     "doctor": "macaca doctor",
