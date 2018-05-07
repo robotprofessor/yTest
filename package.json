@@ -8,11 +8,11 @@
     "automation"
   ],
   "scripts": {
-    "test":" cross-env browser=chrome CHROMEDRIVER_VERSION=2.37 npm run test:desktop-browser",
+    "test": "cross-env CHROMEDRIVER_VERSION=2.37 cross-env browser=chrome macaca run --verbose --reporter macaca-reporter -d ./testscripts/sample.desktop.test.js",
+    "ts": "cross-env CHROMEDRIVER_VERSION=2.33 cross-env browser=chrome macaca run --verbose --reporter macaca-reporter -d ",
+    "helloworld":" cross-env browser=chrome CHROMEDRIVER_VERSION=2.37 npm run test:desktop-browser",
     "doctor": "macaca doctor",
-    "test:desktop-browser": "macaca run --verbose --reporter macaca-reporter -d ./sample-test/desktop-browser-sample.test.js",
-    "test:desktop-electron": "cross-env browser=electron npm run test:desktop-browser",
-    "test:simple-reporter": "cross-env CUSTOM_DIR=macaca-logs/desktop-browser-sample macaca run --verbose --reporter macaca-simple-reportor -d ./macaca-test/desktop-browser-sample.test.js"
+    "test:desktop-browser": "macaca run --verbose --reporter macaca-reporter -d ./testscripts/helloworld.desktop.test.js"
   },
   "repository": {
     "type": "git",
