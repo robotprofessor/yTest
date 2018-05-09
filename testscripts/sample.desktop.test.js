@@ -23,14 +23,13 @@ this.timeout(5 * 60 * 1000);
 //初始化需要加载的web站点URL，initWebSiteURL（url,端口）
 var driver = initWebSiteURL("localhost", "3456");
 
-const attachmentRoot = "//172.16.72.88/质量管理部/自动化脚本附件";
+const attachmentRoot = fs.realpathSync(".") + "/attachment";
 const initialURL = 'http://172.16.72.88/sample';
 
 
 describe('d1', function() {
 
     it('#0 login', function() {
-
         return driver
             .get(initialURL) // 打开网页
             .sleep(1000) // 等待1000毫秒
